@@ -1,0 +1,8 @@
+body {
+    padding-top: 64px; /* Ajusta según la altura de tu header */
+  }
+
+  a{
+    text-decoration: none;
+    color:inherit;
+  }
