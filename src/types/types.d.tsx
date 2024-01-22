@@ -13,3 +13,9 @@ export interface LoginFormValues {
     message: string;
     termsOfService: boolean;
 }
+
+export interface SelectWrapperProps {
+    name: string;
+    label: string;
+    options: { [key: string]: string };
+}

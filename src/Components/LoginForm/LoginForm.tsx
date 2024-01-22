@@ -3,6 +3,8 @@ import { useFormik, Form, FormikProvider } from "formik";
 import { LoginFormSchema, LoginFormInitialValues } from "./LoginFormSchema";
 import { LoginFormValues } from "../../types/types.d";
 import { Textfield } from "./Textfield/Textfield";
+import { SelectWrapper } from "./Select/Select"
+import countries from "../../data/countries.json"
 
 const FormWrapper = styled("div")(({ theme }) => ({
     marginTop: theme.spacing(1),
@@ -63,10 +65,13 @@ export function LoginForm() {
                             <Textfield name="state" label="State" />
                         </Grid>
 
+                        <Grid item xs={12}>
+                            <SelectWrapper name="country" label="country" options={countries} />
+                        </Grid>
 
                         <Grid item xs={12}>
                             <Typography>Booking information</Typography>
-                        </Grid>
+                            G</Grid>
                     </Grid>
                 </Form>
             </FormWrapper>

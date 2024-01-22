@@ -29,6 +29,7 @@ export function Header({ toggleDrawer }: HeaderProps) {
           <Button color="inherit" component={Link} to="/login">Login</Button>
         </Toolbar>
       </AppBar>
+      
     </Box>
   );
 }
