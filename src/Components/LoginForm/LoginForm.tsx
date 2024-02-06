@@ -5,6 +5,9 @@ import { LoginFormValues } from "../../types/types.d";
 import { Textfield } from "./Textfield/Textfield";
 import { SelectWrapper } from "./Select/Select";
 import countries from "../../data/countries.json";
+import { DataTimePicker } from "./DataTimePicker/DataTimePicker";
+import { CheckboxComponent } from "./CheckboxComponent/CheckboxComponent";
+import { SubmitButton } from "./SubmitButton/SubmitButton";
 
 const FormWrapper = styled("div")(({ theme }) => ({
   marginTop: theme.spacing(1),
@@ -12,9 +15,8 @@ const FormWrapper = styled("div")(({ theme }) => ({
 }));
 
 const estiloPaper = {
-    padding: 2,
-    background: 'rgba(255, 255, 255, 0.7)',
-  };
+  padding: 2,
+};
 
 export function LoginForm() {
   const formik = useFormik({
@@ -38,7 +40,7 @@ export function LoginForm() {
               </Grid>
 
               <Grid item xs={6}>
-                <Textfield name="firstName" label="firstName" />
+                <Textfield name="firstName" label="First Name" />
               </Grid>
               <Grid item xs={6}>
                 <Textfield name="lastName" label="lastName" />
@@ -79,7 +81,27 @@ export function LoginForm() {
               </Grid>
 
               <Grid item xs={12}>
-                <Typography>Booking information</Typography>
+                <Typography variant="h5"> Booking information</Typography>
+              </Grid>
+
+              <Grid item xs={6}>
+                <DataTimePicker name="arrivealDate" label="arrivealDate" />
+              </Grid>
+
+              <Grid item xs={6}>
+                <DataTimePicker name="departureDate" label="departureDate" />
+              </Grid>
+
+              <Grid item xs={12}>
+                <Textfield  name="message" label="Message" multiline={true} rows={4}/>
+              </Grid>
+
+              <Grid item xs={12}>
+                <CheckboxComponent  name="termsOfService" label="I agree" legend="termsOfService" />
+              </Grid>
+
+              <Grid item xs={12}>
+                <SubmitButton text={"Enviar"}/>
               </Grid>
             </Grid>
           </Form>
