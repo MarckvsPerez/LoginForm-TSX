@@ -2,12 +2,6 @@ body {
   padding-top: 64px; /* Ajusta según la altura de tu header */
   height: 100vh;
   color: white;
-  background: rgb(10, 180, 255);
-  background: linear-gradient(
-    135deg,
-    rgba(10, 180, 255, 1) 0%,
-    rgba(246, 82, 160, 1) 100%
-  );
 }
 
 a {

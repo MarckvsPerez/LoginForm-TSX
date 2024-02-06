@@ -19,3 +19,18 @@ export interface SelectWrapperProps {
     label: string;
     options: { [key: string]: string };
 }
+
+export interface DataTimePickerProps {
+    name: string;
+    label: string;
+}
+
+export interface CheckboxProps {
+    name: string;
+    label: string;
+    legend: string
+}
+
+export interface SubmitButtonProps {
+    text: string;
+}
